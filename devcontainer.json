@@ -1,0 +1,46 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/cpp
+{
+	"name": "General",
+	"build": {
+		"dockerfile": "Dockerfile"
+	},
+	"features": {
+		"ghcr.io/devcontainers/features/python:1": {},
+		"ghcr.io/devcontainers-contrib/features/zsh-plugins:0": {},
+		"ghcr.io/stuartleeks/dev-container-features/shell-history:0": {},
+		"ghcr.io/guiyomh/features/vim:0": {}
+	},
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "pip install -r ./requirements.txt",
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"xaver.clang-format",
+				"ms-vscode.cpptools",
+				"cheshirekow.cmake-format",
+				"ms-python.vscode-pylance",
+				"ms-python.python",
+				"ZainChen.json",
+				"alefragnani.Bookmarks",
+				"ms-vscode.cpptools-extension-pack",
+				"ms-vscode.cpptools-themes",
+				"davidbroetje.algorithm-mnemonics-vscode",
+				"streetsidesoftware.code-spell-checker",
+				"jack89ita.copy-filename",
+				"mhutchie.git-graph",
+				"waderyan.gitblame",
+				"donjayamanne.githistory",
+				"ms-dotnettools.vscode-dotnet-runtime"
+			]
+		}
+	}
+	// Configure tool-specific properties.
+	// "customizations": {},
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	// "remoteUser": "root"
+}
